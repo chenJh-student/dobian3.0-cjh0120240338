@@ -14,23 +14,23 @@ NEW_FILE_CODE
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #f0f3f5;
         }
-        
+
         #app {
             min-height: 100vh;
         }
-        
+
         .user-profile-page {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         .loading-container,
         .error-container {
             text-align: center;
             padding: 40px 20px;
         }
-        
+
         .spinner {
             border: 4px solid #f3f3f3;
             border-top: 4px solid #3498db;
@@ -40,16 +40,17 @@ NEW_FILE_CODE
             animation: spin 1s linear infinite;
             margin: 0 auto 20px;
         }
-        
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
         }
-        
+
         .profile-header {
             display: flex;
             gap: 30px;
@@ -59,11 +60,11 @@ NEW_FILE_CODE
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
-        
+
         .avatar-section {
             flex: 0 0 150px;
         }
-        
+
         .user-avatar {
             width: 150px;
             height: 150px;
@@ -76,42 +77,42 @@ NEW_FILE_CODE
             font-size: 60px;
             font-weight: bold;
         }
-        
+
         .user-info {
             flex: 1;
         }
-        
+
         .user-name {
             font-size: 28px;
             margin: 0 0 20px 0;
             color: #333;
         }
-        
+
         .user-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin-bottom: 30px;
         }
-        
+
         .stat-item {
             text-align: center;
             padding: 15px;
             background-color: #f8f9fa;
             border-radius: 4px;
         }
-        
+
         .stat-number {
             font-size: 24px;
             font-weight: bold;
             color: #37a;
         }
-        
+
         .stat-label {
             color: #666;
             margin-top: 5px;
         }
-        
+
         .section-title {
             font-size: 20px;
             color: #333;
@@ -119,14 +120,14 @@ NEW_FILE_CODE
             padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
-        
+
         .movies-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
-        
+
         .movie-card {
             background: white;
             border-radius: 8px;
@@ -134,24 +135,24 @@ NEW_FILE_CODE
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
         }
-        
+
         .movie-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .movie-poster {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-        
+
         .movie-title {
             padding: 10px;
             text-align: center;
             font-size: 14px;
             color: #333;
         }
-        
+
         .back-button {
             padding: 10px 20px;
             background-color: #f44336;
@@ -162,7 +163,7 @@ NEW_FILE_CODE
             font-size: 16px;
             margin-right: 10px;
         }
-        
+
         .logout-button {
             padding: 10px 20px;
             background-color: #666;
@@ -172,21 +173,22 @@ NEW_FILE_CODE
             cursor: pointer;
             font-size: 16px;
         }
-        
+
         .back-button:hover,
         .logout-button:hover {
             opacity: 0.9;
         }
-        
+
         .actions {
             margin-top: 20px;
         }
-        
+
         @media (max-width: 768px) {
             .profile-header {
                 flex-direction: column;
                 align-items: center;
             }
+
             .user-stats {
                 grid-template-columns: 1fr;
             }
@@ -241,8 +243,10 @@ NEW_FILE_CODE
 
                 <h2 class="section-title">已看电影 ({{ watchedCount }})</h2>
                 <div v-if="watchedMovies.length > 0" class="movies-grid">
-                    <div v-for="movie in watchedMovies" :key="movie['电影编号']" class="movie-card" @click="viewMovieDetail(movie['电影编号'])">
-                        <img :src="getImagePath(movie['本地图片路径'])" :alt="movie['电影标题']" class="movie-poster" @error="handleImageError">
+                    <div v-for="movie in watchedMovies" :key="movie['电影编号']" class="movie-card"
+                        @click="viewMovieDetail(movie['电影编号'])">
+                        <img :src="getImagePath(movie['本地图片路径'])" :alt="movie['电影标题']" class="movie-poster"
+                            @error="handleImageError">
                         <div class="movie-title">{{ movie['电影标题'] }}</div>
                     </div>
                 </div>
@@ -252,8 +256,10 @@ NEW_FILE_CODE
 
                 <h2 class="section-title">想看电影 ({{ wantToWatchCount }})</h2>
                 <div v-if="wantToWatchMovies.length > 0" class="movies-grid">
-                    <div v-for="movie in wantToWatchMovies" :key="movie['电影编号']" class="movie-card" @click="viewMovieDetail(movie['电影编号'])">
-                        <img :src="getImagePath(movie['本地图片路径'])" :alt="movie['电影标题']" class="movie-poster" @error="handleImageError">
+                    <div v-for="movie in wantToWatchMovies" :key="movie['电影编号']" class="movie-card"
+                        @click="viewMovieDetail(movie['电影编号'])">
+                        <img :src="getImagePath(movie['本地图片路径'])" :alt="movie['电影标题']" class="movie-poster"
+                            @error="handleImageError">
                         <div class="movie-title">{{ movie['电影标题'] }}</div>
                     </div>
                 </div>
@@ -350,9 +356,9 @@ NEW_FILE_CODE
                     try {
                         // 并行加载用户、电影和评论数据
                         const [usersResponse, moviesResponse, commentsResponse] = await Promise.all([
-                            fetch('/backend/data/user.csv'),
-                            fetch('/movie_info.csv'),
-                            fetch('/backend/data/comment.csv')
+                            fetch('./user.csv'),
+                            fetch('./movie_info.csv'),
+                            fetch('./backend/data/comment.csv')
                         ]);
 
                         const usersText = await usersResponse.text();
@@ -409,7 +415,7 @@ NEW_FILE_CODE
 
                             users.push(user);
                         } catch (e) {
-                            console.log(`解析用户第${i+1}行时出错:`, e);
+                            console.log(`解析用户第${i + 1}行时出错:`, e);
                         }
                     }
 
@@ -445,7 +451,7 @@ NEW_FILE_CODE
 
                             movies.push(movie);
                         } catch (e) {
-                            console.log(`解析电影第${i+1}行时出错:`, e);
+                            console.log(`解析电影第${i + 1}行时出错:`, e);
                         }
                     }
 
@@ -493,7 +499,7 @@ NEW_FILE_CODE
 
                             comments.push(comment);
                         } catch (e) {
-                            console.log(`解析评论第${i+1}行时出错:`, e);
+                            console.log(`解析评论第${i + 1}行时出错:`, e);
                         }
                     }
 

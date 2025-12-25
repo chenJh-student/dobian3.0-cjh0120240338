@@ -13,11 +13,11 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #f0f3f5;
         }
-        
+
         #app {
             min-height: 100vh;
         }
-        
+
         .movie-detail {
             background: white;
             border-radius: 8px;
@@ -27,68 +27,68 @@
             grid-template-columns: 300px 1fr;
             gap: 30px;
         }
-        
+
         .poster-section {}
-        
+
         .movie-poster {
             width: 100%;
             border-radius: 4px;
         }
-        
+
         .info-section {
             grid-column: 2;
         }
-        
+
         .movie-title {
             font-size: 28px;
             margin: 0 0 20px 0;
             color: #333;
         }
-        
+
         .rating {
             font-size: 20px;
             color: #f44336;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        
+
         .basic-info {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-bottom: 30px;
         }
-        
+
         .info-item {
             margin-bottom: 10px;
         }
-        
+
         .info-label {
             font-weight: bold;
             color: #666;
             margin-right: 10px;
         }
-        
+
         .plot-section {
             margin-top: 30px;
             grid-column: 1 / -1;
         }
-        
+
         .plot-section h2 {
             margin-top: 0;
             color: #333;
         }
-        
+
         .plot-text {
             line-height: 1.6;
             color: #555;
         }
-        
+
         .back-button-container {
             margin-top: 30px;
             grid-column: 1 / -1;
         }
-        
+
         .back-button {
             padding: 10px 20px;
             background-color: #f44336;
@@ -98,21 +98,23 @@
             cursor: pointer;
             font-size: 16px;
         }
-        
+
         .back-button:hover {
             background-color: #d32f2f;
         }
+
         /* 评论区域样式 */
-        
+
         .comments-section {
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #eee;
             grid-column: 1 / -1;
         }
+
         /* 评论区域样式 */
         /* 评论区域样式 */
-        
+
         .comments-section {
             margin-top: 40px;
             padding-top: 20px;
@@ -120,53 +122,53 @@
             grid-column: 1 / -1;
             /* 让评论区域横跨整个宽度 */
         }
-        
+
         .comments-section h2 {
             color: #333;
             margin-bottom: 20px;
         }
-        
+
         .comment-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .comment-item {
             padding: 15px 0;
             border-bottom: 1px solid #eee;
         }
-        
+
         .comment-item:last-child {
             border-bottom: none;
         }
-        
+
         .comment-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
         }
-        
+
         .comment-user {
             font-weight: bold;
             color: #37a;
         }
-        
+
         .comment-time {
             color: #999;
             font-size: 14px;
         }
-        
+
         .comment-rating {
             color: #f44336;
             font-weight: bold;
         }
-        
+
         .comment-content {
             color: #555;
             line-height: 1.5;
         }
-        
+
         .show-more-comments {
             display: block;
             margin: 20px auto;
@@ -179,29 +181,31 @@
             text-align: center;
             text-decoration: none;
         }
-        
+
         .show-more-comments:hover {
             background-color: #e0e0e0;
         }
+
         /* 主演显示样式 */
-        
+
         .cast-container {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
         }
-        
+
         .cast-item {
             display: inline-block;
         }
-        
+
         .cast-more {
             color: #37a;
             cursor: pointer;
             text-decoration: underline;
         }
+
         /* 同类型电影推荐样式 */
-        
+
         .similar-movies-section {
             margin-top: 40px;
             padding: 20px;
@@ -209,18 +213,18 @@
             border-radius: 8px;
             grid-column: 1 / -1;
         }
-        
+
         .similar-movies-section h2 {
             color: #333;
             margin-bottom: 20px;
         }
-        
+
         .movies-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 20px;
         }
-        
+
         .movie-card {
             background: white;
             border-radius: 8px;
@@ -229,26 +233,26 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
-        
+
         .movie-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .movie-poster-container {
             height: 200px;
             overflow: hidden;
         }
-        
+
         .movie-card-poster {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .movie-card-info {
             padding: 10px;
         }
-        
+
         .movie-card-title {
             font-size: 14px;
             margin: 0 0 5px 0;
@@ -256,13 +260,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        
+
         .movie-card-rating {
             font-size: 12px;
             color: #f44336;
             margin: 0;
         }
-        
+
         @media (max-width: 768px) {
             .movie-detail {
                 background: white;
@@ -273,15 +277,19 @@
                 grid-template-columns: 300px 1fr;
                 gap: 30px;
             }
+
             .poster-section {
                 flex: 0 0 auto;
             }
+
             .basic-info {
                 grid-template-columns: 1fr;
             }
+
             .movies-grid {
                 grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             }
+
             .movie-poster-container {
                 height: 150px;
             }
@@ -305,7 +313,8 @@
 
         <div v-else-if="movie" class="movie-detail">
             <div class="poster-section">
-                <img :src="getImagePath(movie['本地图片路径'])" :alt="movie['电影标题']" class="movie-poster" @error="handleImageError">
+                <img :src="getImagePath(movie['本地图片路径'])" :alt="movie['电影标题']" class="movie-poster"
+                    @error="handleImageError">
             </div>
 
             <div class="info-section">
@@ -348,72 +357,77 @@
                     <div class="info-item">
                         <span class="info-label">主演：</span>
                         <span>
-                                <div class="cast-container">
-                                    <template v-for="(actor, index) in displayedActors" :key="index">
-                                        <span class="cast-item">{{ actor }}</span>
-                        <span v-if="index < displayedActors.length - 1"> / </span>
-                        </template>
-                        <span v-if="actors.length > 3" class="cast-more" @click="toggleCastDisplay">
-                                        {{ showAllActors ? '收起' : '更多' }}
-                                    </span>
+                            <div class="cast-container">
+                                <template v-for="(actor, index) in displayedActors" :key="index">
+                                    <span class="cast-item">{{ actor }}</span>
+                                    <span v-if="index < displayedActors.length - 1"> / </span>
+                                </template>
+                                <span v-if="actors.length > 3" class="cast-more" @click="toggleCastDisplay">
+                                    {{ showAllActors ? '收起' : '更多' }}
+                                </span>
+                            </div>
+                        </span>
                     </div>
-                    </span>
                 </div>
-            </div>
 
-            <div class="plot-section">
-                <h2>剧情简介</h2>
-                <p class="plot-text">{{ movie['剧情简介'] }}</p>
-            </div>
+                <div class="plot-section">
+                    <h2>剧情简介</h2>
+                    <p class="plot-text">{{ movie['剧情简介'] }}</p>
+                </div>
 
-            <!-- 评论区域 -->
-            <div class="comments-section">
-                <h2>用户评论</h2>
-                <ul class="comment-list">
-                    <li v-for="comment in displayedComments" :key="comment['comment_id']" class="comment-item">
-                        <div class="comment-header">
-                            <span class="comment-user">{{ getUserName(comment['user_id']) }}</span>
-                            <span class="comment-time">{{ formatDate(comment['comment_time']) }}</span>
-                        </div>
-                        <div class="comment-rating">
-                            <template v-for="n in parseInt(comment['rating'] || 0)" :key="'star-full-' + n">★</template>
-                            <template v-for="n in (5 - parseInt(comment['rating'] || 0))" :key="'star-empty-' + n">☆</template> ({{ comment['rating'] || 0 }}分)
-                        </div>
-                        <div class="comment-content">{{ comment['comment_content'] || '' }}</div>
-                    </li>
-                </ul>
-                <button v-if="filteredComments.length > visibleCommentCount" @click="showMoreComments" class="show-more-comments">
-                            查看更多评论
-                        </button>
-            </div>
+                <!-- 评论区域 -->
+                <div class="comments-section">
+                    <h2>用户评论</h2>
+                    <ul class="comment-list">
+                        <li v-for="comment in displayedComments" :key="comment['comment_id']" class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-user">{{ getUserName(comment['user_id']) }}</span>
+                                <span class="comment-time">{{ formatDate(comment['comment_time']) }}</span>
+                            </div>
+                            <div class="comment-rating">
+                                <template v-for="n in parseInt(comment['rating'] || 0)"
+                                    :key="'star-full-' + n">★</template>
+                                <template v-for="n in (5 - parseInt(comment['rating'] || 0))"
+                                    :key="'star-empty-' + n">☆</template> ({{ comment['rating'] || 0 }}分)
+                            </div>
+                            <div class="comment-content">{{ comment['comment_content'] || '' }}</div>
+                        </li>
+                    </ul>
+                    <button v-if="filteredComments.length > visibleCommentCount" @click="showMoreComments"
+                        class="show-more-comments">
+                        查看更多评论
+                    </button>
+                </div>
 
-            <!-- 同类型电影推荐 -->
-            <div v-if="similarMovies.length > 0" class="similar-movies-section">
-                <h2>同类型电影推荐</h2>
-                <div class="movies-grid">
-                    <div v-for="similarMovie in similarMovies" :key="similarMovie['电影编号']" class="movie-card" @click="goToMovieDetail(similarMovie['电影编号'])">
-                        <div class="movie-poster-container">
-                            <img :src="getImagePath(similarMovie['本地图片路径'])" :alt="similarMovie['电影标题']" class="movie-card-poster" @error="handleSimilarMovieImageError" />
-                        </div>
-                        <div class="movie-card-info">
-                            <h3 class="movie-card-title">{{ similarMovie['电影标题'] }}</h3>
-                            <p class="movie-card-rating">评分：{{ generateRating(similarMovie['电影标题']) }}</p>
+                <!-- 同类型电影推荐 -->
+                <div v-if="similarMovies.length > 0" class="similar-movies-section">
+                    <h2>同类型电影推荐</h2>
+                    <div class="movies-grid">
+                        <div v-for="similarMovie in similarMovies" :key="similarMovie['电影编号']" class="movie-card"
+                            @click="goToMovieDetail(similarMovie['电影编号'])">
+                            <div class="movie-poster-container">
+                                <img :src="getImagePath(similarMovie['本地图片路径'])" :alt="similarMovie['电影标题']"
+                                    class="movie-card-poster" @error="handleSimilarMovieImageError" />
+                            </div>
+                            <div class="movie-card-info">
+                                <h3 class="movie-card-title">{{ similarMovie['电影标题'] }}</h3>
+                                <p class="movie-card-rating">评分：{{ generateRating(similarMovie['电影标题']) }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div v-else class="error-container">
-        <p>未找到该电影信息</p>
-        <button @click="goBack" class="back-button">返回首页</button>
-    </div>
+        <div v-else class="error-container">
+            <p>未找到该电影信息</p>
+            <button @click="goBack" class="back-button">返回首页</button>
+        </div>
 
-    <div class="back-button-container">
-        <button @click="goBack" class="back-button">返回首页</button>
+        <div class="back-button-container">
+            <button @click="goBack" class="back-button">返回首页</button>
+        </div>
     </div>
-</div>
 </div>
 <script>
     const {
@@ -502,10 +516,10 @@
                 try {
                     // 并行加载电影、评论和用户数据
                     const [movieResponse, commentsResponse, usersResponse, allMoviesResponse] = await Promise.all([
-                        fetch('/movie_info.csv'),
-                        fetch('/backend/data/comment.csv'),
-                        fetch('/backend/data/user.csv'),
-                        fetch('/movie_info.csv') // 再次获取所有电影数据用于推荐
+                        fetch('./movie_info.csv'),
+                        fetch('./backend/data/comment.csv'),
+                        fetch('./backend/data/user.csv'),
+                        fetch('./movie_info.csv') // 再次获取所有电影数据用于推荐
                     ]);
 
                     const movieText = await movieResponse.text();
@@ -565,7 +579,7 @@
 
                         movies.push(movie);
                     } catch (e) {
-                        console.log(`解析电影第${i+1}行时出错:`, e);
+                        console.log(`解析电影第${i + 1}行时出错:`, e);
                     }
                 }
 
@@ -606,7 +620,7 @@
                             return movie;
                         }
                     } catch (e) {
-                        console.log(`解析第${i+1}行时出错:`, e);
+                        console.log(`解析第${i + 1}行时出错:`, e);
                     }
                 }
 
@@ -654,7 +668,7 @@
 
                         comments.push(comment);
                     } catch (e) {
-                        console.log(`解析评论第${i+1}行时出错:`, e);
+                        console.log(`解析评论第${i + 1}行时出错:`, e);
                     }
                 }
 
@@ -690,7 +704,7 @@
 
                         users.push(user);
                     } catch (e) {
-                        console.log(`解析用户第${i+1}行时出错:`, e);
+                        console.log(`解析用户第${i + 1}行时出错:`, e);
                     }
                 }
 

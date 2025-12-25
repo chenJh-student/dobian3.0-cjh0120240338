@@ -6,8 +6,8 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>豆瓣电影</title>
-  <script type="module" crossorigin src="/dobian3.0-cjh0120240338/assets/main-BsoJAo5B.js"></script>
-  <link rel="stylesheet" crossorigin href="/dobian3.0-cjh0120240338/assets/main-BiLoUcdQ.css">
+  <script type="module" crossorigin src="/dobian3.0-cjh0120240338/assets/main-B0YKhvJi.js"></script>
+  <link rel="stylesheet" crossorigin href="/dobian3.0-cjh0120240338/assets/main-7KWLfReQ.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 <script>
     async function testCSV() {
         try {
-            const response = await fetch('/movie_info.csv');
+            const response = await fetch('./movie_info.csv');
             const csvText = await response.text();
             const lines = csvText.split('\n');
             document.getElementById('csv-output').innerHTML = `
