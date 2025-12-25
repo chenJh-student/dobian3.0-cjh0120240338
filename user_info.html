@@ -358,7 +358,7 @@ NEW_FILE_CODE
                         const [usersResponse, moviesResponse, commentsResponse] = await Promise.all([
                             fetch('./user.csv'),
                             fetch('./movie_info.csv'),
-                            fetch('./backend/data/comment.csv')
+                            fetch('./comment.csv')
                         ]);
 
                         const usersText = await usersResponse.text();
