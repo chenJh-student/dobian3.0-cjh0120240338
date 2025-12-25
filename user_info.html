@@ -595,14 +595,14 @@ NEW_FILE_CODE
                 },
 
                 goBack() {
-                    window.location.href = '/';
+                    window.location.href = './';
                 },
 
                 logout() {
                     // 清除用户登录信息
                     localStorage.removeItem('currentUserId');
                     // 跳转到首页
-                    window.location.href = '/';
+                    window.location.href = './';
                 },
 
                 retry() {
@@ -613,7 +613,7 @@ NEW_FILE_CODE
                 },
 
                 viewMovieDetail(movieId) {
-                    window.location.href = `/movie-detail.html?id=${movieId}`;
+                    window.location.href = `./movie-detail.html?id=${movieId}`;
                 }
             }
         }).mount('#app');
