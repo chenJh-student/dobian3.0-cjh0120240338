@@ -786,23 +786,23 @@
 
                     // 确保路径正确
                     if (imagePath.startsWith('img/')) {
-                        return `/${imagePath}`;
+                        return `./${imagePath}`;
                     } else if (!imagePath.startsWith('/')) {
-                        return `/img/${imagePath}`;
+                        return `./img/${imagePath}`;
                     }
                     return imagePath;
                 }
-                return '/img/default_movie.jpg'; // 默认图片路径
+                return './img/default_movie.jpg'; // 默认图片路径
             },
 
             handleImageError(event) {
                 // 图片加载失败时使用默认图片
-                event.target.src = '/img/default_movie.jpg';
+                event.target.src = './img/default_movie.jpg';
             },
 
             handleSimilarMovieImageError(event) {
                 // 同类型电影图片加载失败时使用默认图片
-                event.target.src = '/img/default_movie.jpg';
+                event.target.src = './img/default_movie.jpg';
             },
 
             generateRating(movieTitle) {
